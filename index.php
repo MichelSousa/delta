@@ -165,6 +165,10 @@
                         <!-- start iconboxes -->
                         <div class="iconboxes row">
 
+                        
+
+                          <?php query_posts("showposts=3&category_name=servicos")?>
+                          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <!-- iconbox 1 -->
                             <div class="col-24">
                                 <aside class="iconbox text-left">
@@ -172,44 +176,14 @@
                                         <i class="fa fa-tablet"></i>
                                     </div>
                                     <div class="iconbox-content">
-                                        <h4 class="title">Clean &amp; Responsive</h4>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis velit occaecat tempor in nisi ullamco tempor.</p>
-                                        <a href="#">Learn More &rarr;</a>
+                                        <h4 class="title" title="<?php the_title()?>"><?php the_title()?></h4>
+                                         <p><?php echo excerpt('12'); ?></p>
+                                        <a href="<?php the_Permalink()?>">Leia Mais &rarr;</a>
                                     </div>
                                 </aside>
                             </div>
-
-                            <!-- iconbox 2 -->
-                            <div class="col-24">
-                                <aside class="iconbox text-left">
-                                    <div class="icon circle primary medium">
-                                        <i class="fa fa-rocket"></i>
-                                    </div>
-                                    <div class="iconbox-content">
-                                        <h4 class="title">Pixel Perfect Design</h4>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis velit occaecat tempor in nisi ullamco tempor.</p>
-                                        <a href="#">Learn More &rarr;</a>
-                                    </div>
-                                </aside>
-                            </div>
-
-                            <!-- iconbox 3 -->
-                            <div class="col-24">
-                                <aside class="iconbox text-left">
-                                    <div class="icon circle primary medium">
-                                        <i class="fa fa-heart"></i>
-                                    </div>
-                                    <div class="iconbox-content">
-                                        <h4 class="title">Crafted with Love</h4>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis velit occaecat tempor in nisi ullamco tempor.</p>
-                                        <a href="#">Learn More &rarr;</a>
-                                    </div>
-                                </aside>
-                            </div>
-
-                        </div>
-                        <!-- end iconboxes -->
-
+                            <?php endwhile;else : ?>
+                             <?php endif; ?>
                     </div>
                     <!-- end section content -->
 
@@ -297,7 +271,8 @@
 
                         <!-- start iconboxes -->
                         <div class="iconboxes row">
-
+                              <?php query_posts("showposts=3&category_name=mais-servicos")?>
+                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <!-- iconbox 1 -->
                             <div class="col-27">
                                 <aside class="iconbox text-center">
@@ -305,54 +280,17 @@
                                         <i class="fa fa-globe"></i>
                                     </div>
                                     <div class="iconbox-content">
-                                        <h3 class="title">Web Development</h3>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis.</p>
-                                        <a href="#">Learn More &rarr;</a>
+                                        <h3 class="title"><?php the_title()?></h3>
+                                        <p> <?php echo excerpt('12'); ?></p>
+                                        <a href="<?php the_Permalink()?>">Leia Mais &rarr;</a>
                                     </div>
                                 </aside>
                             </div>
-
+                            <?php endwhile;else : ?>
+                            <?php endif; ?>
                             <!-- iconbox 2 -->
-                            <div class="col-27">
-                                <aside class="iconbox text-center">
-                                    <div class="icon circle purple large">
-                                        <i class="fa fa-rocket"></i>
-                                    </div>
-                                    <div class="iconbox-content">
-                                        <h3 class="title">Brand Building</h3>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis.</p>
-                                        <a href="#">Learn More &rarr;</a>
-                                    </div>
-                                </aside>
-                            </div>
+                            
 
-                            <!-- iconbox 3 -->
-                            <div class="col-27">
-                                <aside class="iconbox text-center">
-                                    <div class="icon circle red large">
-                                        <i class="fa fa-user-md"></i>
-                                    </div>
-                                    <div class="iconbox-content">
-                                        <h3 class="title">Business Consulting</h3>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis.</p>
-                                        <a href="#">Learn More &rarr;</a>
-                                    </div>
-                                </aside>
-                            </div>
-
-                            <!-- iconbox 4 -->
-                            <div class="col-27">
-                                <aside class="iconbox text-center">
-                                    <div class="icon circle blue large">
-                                        <i class="fa fa-twitter"></i>
-                                    </div>
-                                    <div class="iconbox-content">
-                                        <h3 class="title">Social Marketing</h3>
-                                        <p>Lorem ipsum reprehenderit minim in cillum exercitation labore quis.</p>
-                                        <a href="#">Learn More &rarr;</a>
-                                    </div>
-                                </aside>
-                            </div>
 
                         </div>
                         <!-- end iconboxes -->
