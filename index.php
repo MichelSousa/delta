@@ -271,7 +271,7 @@
 
                         <!-- start iconboxes -->
                         <div class="iconboxes row">
-                              <?php query_posts("showposts=3&category_name=mais-servicos")?>
+                              <?php query_posts("showposts=4&category_name=mais-servicos")?>
                              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <!-- iconbox 1 -->
                             <div class="col-27">
