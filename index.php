@@ -376,11 +376,14 @@
                         <!-- start projects -->
                         <div class="projects row">
 
+
+                          <?php query_posts("showposts=4&category_name=projetos")?>
+                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>       
                             <!-- project 1 -->
                             <div class="col-24 web">
                                 <article class="project">
                                     <figure class="project-thumb">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/portfolio-1.jpg" alt="project-1">
+                                         <?php the_post_thumbnail('projeto'); ?> 
                                         <figcaption class="middle">
                                             <div>
                                                 <a href="<?php bloginfo("template_url")?>/assets/images/portfolio-1.jpg" class="icon circle medium lightbox" title="My Project 1"><i class="fa fa-search"></i></a>
@@ -395,49 +398,9 @@
                                     </header>
                                 </article>
                             </div>
-
-                            <!-- project 2 -->
-                            <div class="col-24 photo">
-                                <article class="project">
-                                    <figure class="project-thumb">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/portfolio-2.jpg" alt="project-2">
-                                        <figcaption class="middle">
-                                            <div>
-                                                <a href="<?php bloginfo("template_url")?>/assets/images/portfolio-2.jpg" class="icon circle medium lightbox" title="My Project 2"><i class="fa fa-search"></i></a>
-                                                <a href="project.html" class="icon circle medium"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-
-                                    <header class="project-header">
-                                        <h4 class="project-title"><a href="project.html">Project Title Here</a></h4>
-                                        <div class="project-meta">Photography</div>
-                                    </header>
-                                </article>
-                            </div>
-
-                            <!-- project 3 -->
-                            <div class="col-24 app">
-                                <article class="project">
-                                    <figure class="project-thumb">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/portfolio-3.jpg" alt="project-3">
-                                        <figcaption class="middle">
-                                            <div>
-                                                <a href="<?php bloginfo("template_url")?>/assets/images/portfolio-3.jpg" class="icon circle medium lightbox" title="My Project 3"><i class="fa fa-search"></i></a>
-                                                <a href="project.html" class="icon circle medium"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-
-                                    <header class="project-header">
-                                        <h4 class="project-title"><a href="project.html">Project Title Here</a></h4>
-                                        <div class="project-meta">Mobile Apps</div>
-                                    </header>
-                                </article>
-                            </div>
-
-                        </div>
-                        <!-- end projects -->
+                            <?php endwhile;else : ?>
+                            <?php endif; ?>
+                                
 
                     </div>
                     <!-- end section content -->
@@ -466,65 +429,25 @@
 
                         <!-- start staff -->
                         <div class="staff row">
-
+                               <?php query_posts("showposts=4&category_name=equipe")?>
+                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>     
                             <!-- member 1 -->
                             <div class="col-27">
                                 <figure class="member">
                                     <a href="#">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/staff-1.jpg" alt="client-1">
+                                        <?php the_post_thumbnail('equipe'); ?> 
                                         <span class="bubble icon circle primary medium"><i class="fa fa-briefcase"></i></span>
                                     </a>
                                     <figcaption>
-                                        <h4>Michael Richie</h4>
-                                        <span>The Founder</span>
+                                        <h4><?php the_title()?></h4>
+                                        <span><?php the_content()?></span>
                                     </figcaption>
                                 </figure>
                             </div>
-
-                            <!-- member 2 -->
-                            <div class="col-27">
-                                <figure class="member">
-                                    <a href="#">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/staff-2.jpg" alt="client-2">
-                                        <span class="bubble icon circle primary medium"><i class="fa fa-cog"></i></span>
-                                    </a>
-                                    <figcaption>
-                                        <h4>Greg Thomas</h4>
-                                        <span>The Builder</span>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <!-- member 3 -->
-                            <div class="col-27">
-                                <figure class="member">
-                                    <a href="#">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/staff-3.jpg" alt="client-3">
-                                        <span class="bubble icon circle primary medium"><i class="fa fa-link"></i></span>
-                                    </a>
-                                    <figcaption>
-                                        <h4>Natalie Sarah</h4>
-                                        <span>The Saviour</span>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <!-- member 4 -->
-                            <div class="col-27">
-                                <figure class="member">
-                                    <a href="#">
-                                        <img src="<?php bloginfo("template_url")?>/assets/images/staff-4.jpg" alt="client-4">
-                                        <span class="bubble icon circle primary medium"><i class="fa fa-puzzle-piece"></i></span>
-                                    </a>
-                                    <figcaption>
-                                        <h4>Pedro Martinez</h4>
-                                        <span>The Architect</span>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                        </div>
-                        <!-- end staff -->
+                            <?php endwhile;else : ?>
+                            <?php endif; ?>
+                           
+                          
 
                     </div>
                     <!-- end section content -->

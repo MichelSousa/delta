@@ -5,12 +5,8 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 
 // additional image sizes
 // delete the next line if you do not need additional image sizes
-add_image_size( 'blog', null,null); //300 pixels wide (a
-add_image_size( 'cardapio', 150, 150 ); //300 pixels wide (a
-add_image_size( 'slide', 1005, 495 ); //300 pixels wide (a
-add_image_size( 'social', 40, 40 ); //300 pixels wide (a
-add_image_size( 'social-mini', 60, 60 ); //300 pixels wide (a
-add_image_size( 'social-medium', 160, 45 ); //300 pixels wide (a
+add_image_size( 'projeto',296 ,227); 
+add_image_size( 'equipe',134 ,134); 
 
 
 if ( function_exists( 'register_nav_menu' ) ) {
