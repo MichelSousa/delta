@@ -43,7 +43,7 @@
                     <div id="logo" class="col-29">
                         <h1 class="site-title">
                             <a href="<?php echo get_option("home")?>">
-                               <img src="<?php echo get_theme_mod("logo_image") ?>" alt="casanova">
+                               <img src="<?php echo get_theme_mod("casa_logo_image") ?>" alt="<?php echo get_theme_mod("casa_logo_image") ?>">
                            </a>
                         </h1>
                     </div>

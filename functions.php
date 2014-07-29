@@ -7,7 +7,7 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 // delete the next line if you do not need additional image sizes
 add_image_size( 'projeto',296 ,227); 
 add_image_size( 'equipe',134 ,134); 
-
+add_image_size( 'cliente',150 ,50); 
 
 if ( function_exists( 'register_nav_menu' ) ) {
 register_nav_menu( 'primary', 'Este é meu primeiro menu' );
@@ -36,52 +36,6 @@ add_action( 'wp_head', 'sushiai_css_customizer' );
 
 add_action( 'customize_register', 'gamesquare_customize_register' );
 
-wp_register_script('jquery', get_bloginfo('template_url').'/js/jquery.js');
-wp_enqueue_script('jquery');
-
-//====================== bootstrap
- wp_register_script('bootstrap', get_bloginfo('template_url').'/js/bootstrap.min.js');
- wp_enqueue_script('bootstrap');
-
-
- //====================== bootstrap-tab
- wp_register_script('bootstrap-tab', get_bloginfo('template_url').'/js/bootstrap-tab.js');
- wp_enqueue_script('bootstrap-tab');
-
-//====================== bootstrap-collapse
- wp_register_script('bootstrap-collapse', get_bloginfo('template_url').'/js/bootstrap-collapse.js');
- wp_enqueue_script('bootstrap-collapse');
-
-//====================== bootstrap-dropdown
- wp_register_script('bootstrap-dropdown', get_bloginfo('template_url').'/js/bootstrap-dropdown.js');
- wp_enqueue_script('bootstrap-dropdown');
-
-//====================== bootstrap-dropdown
- wp_register_script('bootstrap-dropdown', get_bloginfo('template_url').'/js/bootstrap-dropdown.js');
- wp_enqueue_script('bootstrap-dropdown');
-
-//====================== easing
- wp_register_script('easing', get_bloginfo('template_url').'/js/jquery.easing.min.js');
- wp_enqueue_script('easing');
-
- //====================== tab
- wp_register_script('tab', get_bloginfo('template_url').'/js/tab.js');
- wp_enqueue_script('tab');
-
-
-//====================== slide
- wp_register_script('slide', get_bloginfo('template_url').'/js/slide.js');
- wp_enqueue_script('slide');
-
-
-//====================== ancora-deslizante
- wp_register_script('ancora-deslizante', get_bloginfo('template_url').'/js/ancora-deslizante.js');
- wp_enqueue_script('ancora-deslizante');
-
-
-//====================== ancora-deslizante
- wp_register_script('blog-carrossel', get_bloginfo('template_url').'/js/blog-carrossel.js');
- wp_enqueue_script('blog-carrossel');
 
 
 /* Desenvolvido por Michel Damasceno */
@@ -92,19 +46,19 @@ function gamesquare_customize_register( $wp_customize )
 
 //===================== Upload do logotipo
 
-$wp_customize->add_section( 'sushiai_image' , array(
+$wp_customize->add_section( 'casa_image' , array(
      'title'     => __( 'Logo', 'sushiai' ),
       'description'   => 'Modifique o logo',
 ) );
 
-$wp_customize->add_setting( 'logo_image' , array(
-    'default'     => 'http://preview.vicomercial.com.br/sushiai/wp-content/themes/sushiai/img/logo.png',
+$wp_customize->add_setting( 'casa_logo_image' , array(
+    'default'     => 'Adicione o logotipo',
 ) );
 
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_image', array(
 	'label'        => __( 'Logo', 'sushiai' ),
-	'section'    => 'sushiai_image',
-	'settings'   => 'logo_image',
+	'section'    => 'casa_image',
+	'settings'   => 'casa_logo_image',
 ) ) );
 
 
@@ -145,16 +99,16 @@ $wp_customize->add_control('url_like', array(
 
 //===================== Número de telefone
 
-$wp_customize->add_section( 'sushiai_fone' , array(
+$wp_customize->add_section( 'casa_fone' , array(
      'title'     => __( 'Número de telefone', 'sushiai' ),
       'description'   => 'Digite o número de telefone',
 ) );
 
 $wp_customize->add_setting( 'text_fone' , array(
-    'default'     => '(41) 3672-4116',
+    'default'     => '(62)  1234 5678 90',
 ) );
 
-$wp_customize->add_control('sushiai_fone_text', array(
+$wp_customize->add_control('casa_fone_text', array(
   'label'        => __( 'url', 'sushiai' ),
   'section'    => 'sushiai_fone',
   'settings'   => 'text_fone',

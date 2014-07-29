@@ -20,7 +20,7 @@
                                     <strong>Casanova Media, PT</strong><br>
                                     <span>123 Cikalong Town, West Bandung</span><br>
                                     <span>West Java, Indonesia 40556</span><br>
-                                    <abbr title="Telephone">P</abbr>: +62 1234 5678 90<br>
+                                    <abbr title="Telephone">P</abbr>: <?php echo get_theme_mod("casa_fone_text") ?><br>
                                     <abbr title="Telephone">E</abbr>: <a href="mailto:contact@casanova.co.id">contact@casanova.co.id</a>
                                 </address>
                             </aside>

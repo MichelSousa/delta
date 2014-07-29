@@ -264,8 +264,8 @@
 
                         <!-- start section header -->
                         <header class="content-header section-header text-center">
-                            <h2>Our Services</h2>
-                            <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo</p>
+                            <h2>Nossos Serviços</h2>
+                            
                         </header>
                         <!-- end section header -->
 
@@ -315,8 +315,8 @@
 
                         <!-- start section header -->
                         <header class="content-header section-header text-center">
-                            <h2>Some Fun Facts</h2>
-                            <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo</p>
+                            <h2>Algumas Curiosidades</h2>
+                            
                         </header>
                         <!-- end section header -->
 
@@ -368,7 +368,7 @@
 
                         <!-- start section header -->
                         <header class="content-header section-header text-center">
-                            <h2>Featured Projects</h2>
+                            <h2>Projetos recentes</h2>
                             <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo</p>
                         </header>
                         <!-- end section header -->
@@ -422,8 +422,8 @@
 
                         <!-- start section header -->
                         <header class="content-header section-header text-center">
-                            <h2>Meet Our Team</h2>
-                            <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo</p>
+                            <h2>Nossa equipe</h2>
+                          
                         </header>
                         <!-- end section header -->
 
@@ -514,55 +514,28 @@
 
                         <!-- start section header -->
                         <header class="content-header section-header text-center">
-                            <h2>Our Beloved Clients</h2>
-                            <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo</p>
+                            <h2>Clientes</h2>
+                           
                         </header>
                         <!-- end section header -->
 
                         <!-- start clients -->
                         <div class="clients row">
 
-                            <!-- client 1 -->
+                          <?php query_posts("showposts=4&category_name=clientes")?>
+                          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>   
                             <div class="col-30">
                                 <div class="client">
-                                    <a href="#" class="tooltip" title="Bulble"><img src="assets/images/client-1.png" alt="client-1"></a>
+                                    <a href="#" class="tooltip" title="Bulble">
+                                          <?php the_post_thumbnail('cliente'); ?> 
+                                    </a>
                                 </div>
                             </div>
+                          <?php endwhile;else : ?>
+                          <?php endif; ?>
 
-                            <!-- client 2 -->
-                            <div class="col-30">
-                                <div class="client">
-                                    <a href="#" class="tooltip" title="DigiMedia"><img src="assets/images/client-2.png" alt="client-2"></a>
-                                </div>
-                            </div>
+                          
 
-                            <!-- client 3 -->
-                            <div class="col-30">
-                                <div class="client">
-                                    <a href="#" class="tooltip" title="Circular"><img src="assets/images/client-3.png" alt="client-3"></a>
-                                </div>
-                            </div>
-
-                            <!-- client 4 -->
-                            <div class="col-30">
-                                <div class="client">
-                                    <a href="#" class="tooltip" title="BigBucks"><img src="assets/images/client-4.png" alt="client-4"></a>
-                                </div>
-                            </div>
-
-                            <!-- client 5 -->
-                            <div class="col-30">
-                                <div class="client">
-                                    <a href="#" class="tooltip" title="ThreeCles"><img src="assets/images/client-5.png" alt="client-5"></a>
-                                </div>
-                            </div>
-
-                            <!-- client 6 -->
-                            <div class="col-30">
-                                <div class="client">
-                                    <a href="#" class="tooltip" title="HugeBombs"><img src="assets/images/client-6.png" alt="client-6"></a>
-                                </div>
-                            </div>
 
                         </div>
                         <!-- end clients -->
@@ -585,19 +558,7 @@
                     <!-- start section content -->
                     <div class="section-content">
 
-                        <!-- start callout -->
-                        <div class="callout">
-                            <div class="callout-text">
-                                <h2>Build Your Outstanding Website with Casanova</h2>
-                                <p class="lead">Lorem ipsum veniam adipisicing cupidatat dolor commodo</p>
-                            </div>
-
-                            <div class="callout-button">
-                                <a href="#" class="button medium primary"><i class="fa fa-cloud-download"></i> Download</a>
-                                <a href="#" class="button medium green"><i class="fa fa-question-circle"></i> Learn More</a>
-                            </div>
-                        </div>
-                        <!-- end callout -->
+               
 
                     </div>
                     <!-- end section content -->
@@ -613,5 +574,5 @@
 		<?php echo get_footer()?> 
 		
 		
-		  <input type="submit" value="enviar">
+		  
 		
